@@ -1,0 +1,67 @@
+.fondo {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background-image: url(../IMG/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .fondo__login{
+    background-color: #638263;
+    padding: 1px;
+    border-radius: 5%;  
+    padding: 50px;
+    opacity: 75%;
+  }
+
+  .fondo__titulo{
+    color: aliceblue;
+    font: 150% sans-serif;
+    text-align: center;
+  }
+
+  .fondo__sub{
+    color: aliceblue;
+    font: 100% sans-serif;
+  }
+
+  .fondo__sub--input{
+    color: #638263;
+
+  }
+
+ .boton{
+  padding: 5px;
+  font: 100% sans-serif;
+  color:#638263;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 170px;
+  text-align: center;
+ }
+
+ button:hover{
+  background-color:#A7BFA5;
+  
+
+ }
+
+
+
+ .fondo__error{
+  background-color: #638263;
+    padding: 1px;
+    border-radius: 5%;  
+    padding: 50px;
+    opacity: 75%;
+    margin: 2%;
+    
+ }
+
+

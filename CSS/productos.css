@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header{
+    background-color: #638263;
+    padding: 5px;
+   
+}
+
+.header__titulo{
+    color:#FFF7D3 ;
+    text-align:left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navegador{
+    display: flex;
+    padding: 5px;
+    background-color: #A7BFA5;
+    justify-content: center;
+    opacity: 75%;
+}
+
+
+.navegador__titulo{
+    display: flex;
+    color: #FFF7D3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url(../IMG/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+
+    
+}
+
+.filtros{
+    background-color: #A7BFA5;
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    opacity: 75%;
+    flex-direction: column
+    
+}
+
+.filtros__titulo{
+    color: #FFF7D3;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.filtros_boton{
+    color:#FFF7D3;
+    background-color: #638263;
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.targetas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+  
+   
+}
+
+.targetas__car{  
+    width: 180px;
+    height: 250px;
+    margin: 10px;
+    background-color: #638263;
+    opacity: 90%;
+    border-radius: 10%;
+
+}
+
+.targetas__img{
+    width: 100px;
+    height: 100px;  
+    
+}
+
+.targetas__texto{
+    font-size: 10px;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FFF7D3;
+}
+
+
+.navboton{
+   /*background-color:#A7BFA5;*/
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    opacity: 80%;
+}
+
+.navboton__boton{
+    color:#FFF7D3;
+    background-color: #638263;
+    flex-direction: column;
+    border-radius: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+ 
+.footer{
+    display: flex;
+flex-direction: row;
+    padding: 15px;
+    margin: 10px;
+    background-color:#638263;
+}
+.footer__titulo{
+    color: #FFF7D3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.mensajeError

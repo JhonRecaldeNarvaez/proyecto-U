@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <section class="fondo">
+        <section class="fondo__login">
+            <header class="fondo__titulo">
+                <h1>Login</h1>
+            </header><br>
+
+            <article class="fondo__sub">
+                <label for="email">Correo electrónico</label><br>
+                <input class="fondo__sub--input" type="email" id="email" required>
+            </article><br>
+
+            <article class="fondo__sub">
+                <label for="password">Contraseña</label><br>
+                <input class="fondo__sub--input" type="password" id="password" required>
+            </article><br>
+
+            <article>
+                <button class="boton" onclick="login()">Iniciar Sesión</button>
+                <br>
+                <br>
+                <button class="boton" onclick="limpiar()">Limpiar</button>
+            </article><br>
+
+            
+        </section>
+
+        <section class="fondo__error">
+            <h1 class="fondo__sub">Por que favor tener encuenta estas recomendaciones</h1>
+
+            <p class="fondo__sub" id="msm"></p>
+            
+        </section>
+    </section>
+
+   
+</section>
+    <script src="./JS/login.js" type="text/javascript"></script>
+</body>
+</html>
