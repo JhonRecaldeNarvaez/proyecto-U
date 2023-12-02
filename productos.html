@@ -14,24 +14,26 @@
     </header>
 
     <nav class="navegador">
-        <h2 class="navegador__titulo">NuSestros productos</h2>
+        <h2 class="navegador__titulo">PRODUCTOS</h2>
     </nav>
 
     <section class="row">
         <section class="filtros">
-            <h2 class="filtros__titulo">NUESTROS PRODUCTOS</h2>
+            <h2 class="filtros__titulo">FILTRAR POR CATEGORIA</h2>
 
             <!-- Filtramos por categoria -->
             <button class="filtros_boton" onclick="filtrarPorCategoria('Gold')">GOLD</button><br>
             <button class="filtros_boton" onclick="filtrarPorCategoria('Platinum')">PLATINUM</button><br>
             <button class="filtros_boton" onclick="filtrarPorCategoria('Silver')">SILVER</button><br>
-            <button id="mostrarTodos" class="filtros_boton" onclick="limpiarFiltros()">Mostrar Todos</button><br>
 
             <!-- Filtramos por precios -->
-            <h3>Filtrar por precio:</h3>
+            <h3 class="filtros__titulo">FILTRAR POR PRECIOS</h3>
             <label><input type="checkbox" value="0-30000" onchange="filtrarPorPrecio(this)">0 - 30,000</label><br>
             <label><input type="checkbox" value="30000-50000" onchange="filtrarPorPrecio(this)">30,000 - 50,000</label><br>
             <label><input type="checkbox" value="50000-90000" onchange="filtrarPorPrecio(this)">50,000 - 90,000</label><br>
+
+            <button id="mostrarTodos" class="filtros_boton" onclick="limpiarFiltros()">LIMPIAR FILTROS</button><br>
+
         </section>
 
         <section class="navboton">
@@ -50,6 +52,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -63,6 +70,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -76,6 +88,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -89,6 +106,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -102,6 +124,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -115,6 +142,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -128,6 +160,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -141,6 +178,11 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
 
@@ -154,21 +196,15 @@
                         <p class="targetas__texto">Especie:</p>
                         <p class="targetas__texto">Cantidad</p>
                         <p class="targetas__texto">Disponible</p>
+                        <!-- Agrega un contenedor adicional para los detalles de la flor -->
+                        <div class="detalles-flor" style="display: none;">
+                            <p class="targetas__texto">Descripción: <span id="descripcionFlor"></span></p>
+                            <!-- Agrega más detalles según sea necesario -->
+                        </div>
                     </div>
                 </article>
+                
 
-                <article class="targetas__car">
-                    <figure>
-                        <img class="targetas__img" alt="Imagen de la flor">
-                    </figure>
-                    <div>
-                        <p class="targetas__texto">Categoria:</p>
-                        <p class="targetas__texto">Precio:</p>
-                        <p class="targetas__texto">Especie:</p>
-                        <p class="targetas__texto">Cantidad</p>
-                        <p class="targetas__texto">Disponible</p>
-                    </div>
-                </article>
                 <!-- Agrega más tarjetas según sea necesario -->
             </article>
 
@@ -185,6 +221,8 @@
     <footer class="footer">
         <h1 class="footer__titulo">footer</h1>
     </footer>
+
+    <script src="./JS/BDfloristeria.js"></script>
 
     <script src="./JS/BDfloristeria.js"></script>
 </body>

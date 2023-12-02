@@ -139,3 +139,46 @@ flex-direction: row;
 }
 
 
+
+
+.detalles-flor {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    background:#A7BFA5;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.detalles__flor p {
+    margin: 0;
+}
+
+.detalles__flor span {
+    font-weight: bold;
+    color:#FFF7D3; 
+}
+
+
+.cerrarPopupBtn {
+    background:#FFF7D3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
