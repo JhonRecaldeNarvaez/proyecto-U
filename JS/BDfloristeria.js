@@ -1,7 +1,7 @@
 const data = [
     {
       id: 1,
-      img: "url_imagen_1",
+      img: "./IMG/IMGBD/ROSA.JPG",
       Nombredeflor: "Rosa",
       precio: 32000,
       categoria: "Silver",
@@ -404,18 +404,22 @@ const data = [
   
 ];
 
-// Función para llenar la estructura con datos del arreglo
-function llenarTarjetasConDatosDelArreglo() {
-  const tarjetas = document.querySelectorAll(".targetas__car");
+let currentPage = 0;
+let currentCategory = null;
+let currentPriceRanges = [];
 
-  // Iterar sobre las tarjetas y los datos en el arreglo
+//Traemos dagtos a tarjetas de la bd
+
+function llenarTarjetasConDatosDelArreglo() {
+  const filteredData = data.filter((item) =>
+    (!currentCategory || item.categoria === currentCategory) &&
+    (!currentPriceRanges.length || currentPriceRanges.includes(getPriceRange(item.precio)))
+  );
+
+  const tarjetas = document.querySelectorAll(".targetas__car");
   tarjetas.forEach((tarjeta, index) => {
     const div = tarjeta.querySelector("div");
-
-    // Obtener los datos del arreglo usando el índice
-    const { categoria, precio, Nombredeflor, cantidadUnidades } = data[index];
-
-    // Asignar los datos a los elementos p dentro del div
+    const { categoria, precio, Nombredeflor, cantidadUnidades } = filteredData[index + currentPage * tarjetas.length];
     div.children[0].textContent = "Categoria: " + categoria;
     div.children[1].textContent = "Precio: $" + precio;
     div.children[2].textContent = "Especie: " + Nombredeflor;
@@ -424,6 +428,90 @@ function llenarTarjetasConDatosDelArreglo() {
   });
 }
 
-// Llamada a la función para llenar las tarjetas con datos del arreglo al cargar la página
-window.onload = llenarTarjetasConDatosDelArreglo;
+//Actializamos numeor de pagina que correponde a la pagina en la que se pociciona el user
 
+function actualizarNumeroDePagina() {
+  document.getElementById("pageNumber").textContent = currentPage + 1;
+}
+//Funcion filtro por precio
+function filtrarPorPrecio(checkbox) {
+  const priceRange = checkbox.value;
+
+  if (checkbox.checked) {
+    currentPriceRanges.push(priceRange);
+  } else {
+    const index = currentPriceRanges.indexOf(priceRange);
+    if (index !== -1) {
+      currentPriceRanges.splice(index, 1);
+    }
+  }
+
+  currentPage = 0;
+  llenarTarjetasConDatosDelArreglo();
+  actualizarNumeroDePagina();
+}
+
+
+
+
+//Funcion filtrar por precio
+function getPriceRange(price) {
+  if (price <= 30000) return "0-30000";
+  if (price <= 50000) return "30000-50000";
+  if (price <= 90000) return "50000-90000";
+  return "90000-300000";
+}
+
+//--------------------------------------------------------
+
+//Funcion filtrar por categoria
+function filtrarPorCategoria(categoria) {
+  currentCategory = categoria;
+  currentPage = 0;
+  llenarTarjetasConDatosDelArreglo();
+  actualizarNumeroDePagina();
+}
+
+
+//Limpiamos todos los filtros aplicados cuando el ususario lo preciona y limpia los filtros
+function limpiarFiltros() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+
+  currentCategory = null;
+  currentPriceRanges = [];
+
+  currentPage = 0;
+  llenarTarjetasConDatosDelArreglo();
+  actualizarNumeroDePagina();
+}
+
+//---------------------------------------------------------------------------------------------
+
+//Fucion para retroceder tam bien funciona con los filtros aplicados esta ok
+function irAtras() {
+  if (currentPage > 0) {
+    currentPage--;
+    llenarTarjetasConDatosDelArreglo();
+    actualizarNumeroDePagina();
+  }
+}
+//Funcion para segir a siguiente pagina aplica con filtors esta ok
+function irSiguiente() {
+  const totalPages = Math.ceil(data.length / document.querySelectorAll(".targetas__car").length);
+  if (currentPage < totalPages - 1) {
+    currentPage++;
+    llenarTarjetasConDatosDelArreglo();
+    actualizarNumeroDePagina();
+  }
+}
+
+document.getElementById("btnAtras").addEventListener("click", irAtras);
+document.getElementById("btnSiguiente").addEventListener("click", irSiguiente);
+//Actualizar 
+window.onload = function () {
+  llenarTarjetasConDatosDelArreglo();
+  actualizarNumeroDePagina();
+};

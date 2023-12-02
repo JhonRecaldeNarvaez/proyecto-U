@@ -52,7 +52,7 @@ function miPromesa() {
   return new Promise(resolve => {
    
     setTimeout(() => {
-      resolve("Inicio de sesión exitoso");
+      resolve("");
     }, 2000);
   });
 }
@@ -75,7 +75,7 @@ function login() {
     miPromesa().then(mensajeExito => {
       document.getElementById("msm").innerHTML = mensajeExito;
       clean();
-      // Redirige a productos.html después de un inicio de sesión exitoso
+      // Redirige a productos.html después de un inicio de sesion valdado
       window.location.href = "productos.html";
     });
   }
@@ -90,3 +90,5 @@ function limpiar() {
 function clean() {
   limpiar();
 }
+
+
