@@ -89,6 +89,7 @@ body{
     background-color: #638263;
     opacity: 90%;
     border-radius: 10%;
+    z-index: 50;
 
 }
 
@@ -127,8 +128,7 @@ body{
 }
  
 .footer{
-    display: flex;
-flex-direction: row;
+   
     padding: 15px;
     margin: 10px;
     background-color:#638263;
@@ -138,41 +138,57 @@ flex-direction: row;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-
-
-.detalles-flor {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    
-    background:#A7BFA5;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+/* estilos ver*/
+.detalles-flor{
+   width: 180px;
+   height: 230px;
+   background:#FFF7D3;
+   position:absolute;
+   top: 180px;
 }
 
+.detalles-flormedio{
+    width: 180px;
+    height: 480px;
+    background:#FFF7D3;
+    position:absolute;
+    top: 180px;
+    width: 180px;
+    height: 230px;
+ }
 
-.detalles__flor p {
-    margin: 0;
+ .detalles-flor{
+    width: 180px;
+    height: 230px;
+    background:#FFF7D3;
+    position:absolute;
+    top: 180px;
+ }
+
+.detalle__texto{
+    font-size: 10px;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
+   
+    color: #638263;
+}
+
+                   
+
+.detalles__flor {
+    margin: 3;
 }
 
 .detalles__flor span {
     font-weight: bold;
-    color:#FFF7D3; 
+    color:#638263; 
 }
 
 
 .cerrarPopupBtn {
-    background:#FFF7D3;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
+   
 }
 
 
